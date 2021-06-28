@@ -5,8 +5,11 @@ from pymongo import MongoClient
 # App factory
 def create_app():
     app = Flask(__name__)
+    # client = MongoClient(
+    #     "mongodb+srv://haininhhoang94:trangtrinh1811@microblog-application.cnt6v.mongodb.net/test?authSource=admin&replicaSet=atlas-ytu7u2-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+    # )
     client = MongoClient(
-        "mongodb+srv://haininhhoang94:trangtrinh1811@microblog-application.cnt6v.mongodb.net/test?authSource=admin&replicaSet=atlas-ytu7u2-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+        "mongodb+srv://haininhhoang94:trangtrinh1811@microblog-application.cnt6v.mongodb.net/test"
     )
     app.db = client.microblog
 
