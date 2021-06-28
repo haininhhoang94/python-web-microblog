@@ -9,7 +9,6 @@ def create_app():
         "mongodb+srv://haininhhoang94:trangtrinh1811@microblog-application.cnt6v.mongodb.net/test?authSource=admin&replicaSet=atlas-ytu7u2-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
     )
     app.db = client.microblog
-    entries = []
 
     @app.route("/", methods=["GET", "POST"])
     def home():
